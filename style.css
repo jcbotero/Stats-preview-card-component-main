@@ -1,0 +1,203 @@
+body{
+    background-color: hsl(233, 47%, 7%);
+    width: 1440px;
+    font-size: 15px;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("./Inter-VariableFont_slnt_wght.ttf");
+}
+
+@font-face {
+    font-family: "Lexend";
+    src: url("./LexendDeca-VariableFont_wght.ttf");
+}
+
+.main {
+    background-color: hsl(244, 38%, 16%);
+    width: 580px;
+    height: 448px;
+    margin-top: 158px;
+    margin-left: 220px;
+    text-align: justify;
+}
+
+
+.overlay {
+    position: absolute;
+  width: 580px;
+  height: 448px;;
+  display: flex;
+   left: 810px;
+   top: 158px;
+   }
+   
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+   .overlay:before {
+    content: ""; /* debe tener contendio pero debe ser vacio para el color */
+    position: absolute;
+    width: 580px;
+    height: 448px;;
+    background: hsl(277, 72%, 29%);
+    opacity: 0.6;
+     } /* con los ultios 3 selector posiciono una imagen y le coloco color
+       encima, para eso importante envolver en una tag en html y colocarla
+       tbn con :before */
+
+
+h1 {
+    color:hsl(0, 0%, 100%);
+    padding: 70px 90px 5px 80px;
+    text-align: left;
+    font-family: "Inter";
+    font-weight:700;
+    font-size: 37px;
+}
+
+.ins {
+ color: hsl(277, 64%, 61%);
+ text-emphasis: none;
+}
+
+.header h4 {
+    color:hsla(0, 0%, 100%, 0.75);
+    padding: 0px 120px 20px 80px;
+    text-align: left;
+    font-family: "Inter";
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+.data {
+    padding: 10px 90px 10px 30px;
+    text-align: left;
+    line-height: 0; /* con este pude pegar mas la linea de numeros y letras*/
+   
+}
+
+.data .num {
+    display: flex;
+    color: hsl(0, 0%, 100%);
+    justify-content: space-around;
+    font-family: "Lexend";
+    font-weight:bolder;
+    font-size: 26px;
+}  /* asi acomodo los items en el centro y hago que ocupen espacio al rededor */
+
+
+.data .text  {
+   color:hsla(0, 0%, 100%, 0.6);
+   display: flex;
+   justify-content: space-around;
+   padding-left: 12px;
+   font-family: "Inter";
+   font-weight: 700;
+   font-size: 12px;
+   letter-spacing: 0.3mm;   
+   margin-right: 22px;
+}
+
+
+/* mobile responsive design */ 
+
+@media (max-width: 375px ) {  /* desbo quitar los margin , tops, y acomodar los display si quiero organizar en columna toda la web */
+                              /* esto en todos los elmentos */
+    body{
+      display: flex;
+      padding-left: 15px;
+      margin-left: 0px;
+      width: 370px;
+     
+    }
+
+
+.main {
+    display:inline-flex;
+    background-color: hsl(244, 38%, 16%);
+    width: 330px;
+    height: 580px;
+    margin: 280px 15px 0px 15px;
+}
+
+
+.overlay {
+    position: absolute;
+  width: 330px;
+  height: 240px;;
+  display: flex;
+   left: 5px;
+   top: 20px;
+   margin:  23px 10px 0px 24px;
+}
+   
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.overlay:before {
+    content: ""; 
+    position: absolute;
+    width: 330px;
+    height: 240px;
+  display: flex;
+    background: hsl(277, 72%, 29%);
+    opacity: 0.6;
+     } 
+
+
+h1 {
+    padding: 0px 17px 0px 15px;
+    text-align: center;
+    font-weight:700;
+    font-size: 33px;
+
+}
+
+
+.header h4 {
+    padding: 10px 17px 15px 15px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.data {
+    padding: 1px 150px 5px 40px;
+    text-align: center;
+    display: grid;
+    line-height: 0; 
+    position: absolute;
+    top: 580px;
+}
+
+.data .num {
+    position: absolute;
+    display: grid;
+    justify-content:flex-end;
+    font-size: 26px;
+    width: 100%;
+    height: 100%;
+    line-height: 1.4; /* con esta puedo separar los textos del div hacia abajo */
+}  
+
+
+.data .text  {
+   display: grid;
+   justify-content: space-around;
+   padding-left: 115px;
+   margin-right: 22px;
+   padding-top: 40px;
+   position: absolute;
+   line-height: 5.2;
+}
+}
