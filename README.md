@@ -1,4 +1,4 @@
-# Stats-preview-card-component-main
+# stats-preview-card-component-main
 
 Used of HTM & CSS basic tools
 
